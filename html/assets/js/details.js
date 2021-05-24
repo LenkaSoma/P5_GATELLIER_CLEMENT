@@ -92,12 +92,12 @@ function addProduct(product) {
   } else {
     currentCart = JSON.parse(sessionStorage.getItem('anyItem'));
 
-    for (let cart of currentCart) {
+    currentCart.forEach(cart => {
       if (product._id === cart._id && product.selectedLense === cart.selectedLense) {
         cart.quantity++;
         otherProduct = false;
       }
-    }
+    });
 
     if (otherProduct) currentCart.push(savedProduct);
     sessionStorage.setItem('anyItem', JSON.stringify(currentCart));

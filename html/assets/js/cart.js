@@ -14,7 +14,7 @@ function displayProductsQuantity() {
             total = total + (product.price * product.quantity);
 
             html +=
-                '<tr>'+
+                '<tr id="'+ product._id +'">'+
                     '<th scope="row" class="border-0">'+
                         '<div class="p-2">'+
                             '<img src="'+ product.imageUrl +'" alt="'+ product.name +'" width="70" class="img-fluid rounded shadow-sm">'+
@@ -25,7 +25,7 @@ function displayProductsQuantity() {
                     '</th>'+
                     '<td class="border-0 align-middle"><strong>'+ (product.price * product.quantity /100).toFixed(2).replace(".",",") +'€</strong></td>'+
                     '<td class="border-0 align-middle"><strong>'+ product.quantity +'</strong></td>'+
-                    '<td class="border-0 align-middle"><a href="#" class="text-dark id="delete"><i class="fa fa-trash"></i></a></td>'+
+                    '<td class="border-0 align-middle"><a href="#" class="text-dark" id="delete"><i class="fa fa-trash"></i></a></td>'+
                 '</tr>'
 
             document.getElementById('cart').innerHTML = html;
@@ -40,6 +40,7 @@ function displayProductsQuantity() {
             e.preventDefault();
             SendForm();
         });
+        
     } else {
         // Si aucun produit dans le panier
         noProduct = '<h5 class="mb-0 ml-3 d-inline-block align-middle">Vous n\'avez aucun produit dans votre panier !</h5>'
@@ -47,7 +48,6 @@ function displayProductsQuantity() {
         document.getElementById("formstyle").style.display = "none";
     }
 }
-
 
 function SendForm() {
     // On récupère les valeurs du formulaire
