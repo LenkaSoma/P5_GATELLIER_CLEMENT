@@ -76,7 +76,6 @@ function SendInfos(contactItems) {
     fetch("http://localhost:3000/api/cameras/order", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        mode: 'cors',
         body: contactItems
     }).then(response => {
         return response.json();
