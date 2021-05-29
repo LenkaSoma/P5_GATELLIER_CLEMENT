@@ -47,7 +47,7 @@ fetch(`http://localhost:3000/api/cameras/${IDProduct}`)
       '</div>'
 
     // On incorpore la variable element dans le HTML
-    document.getElementById("content").innerHTML = element;
+    document.getElementById("details").innerHTML = element;
 
     // Menu déroulant pour choisir les lentilles
     let choice = document.getElementById("select_lense");

@@ -90,6 +90,9 @@ a {
     display: inline-block;
 }
 
+.minheight {
+    min-height: 850px !important;
+}
 .product_options {
     margin-bottom: 10px;
 }

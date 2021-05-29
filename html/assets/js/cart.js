@@ -23,9 +23,9 @@ function displayProductsQuantity() {
                             '</div>'+
                         '</div>'+
                     '</th>'+
-                    '<td class="border-0 align-middle"><strong>'+ (product.price * product.quantity /100).toFixed(2).replace(".",",") +'€</strong></td>'+
+                    '<td class="border-0 align-middle"><strong>'+ product.selectedLense +'</strong></td>'+
                     '<td class="border-0 align-middle"><strong>'+ product.quantity +'</strong></td>'+
-                    '<td class="border-0 align-middle"><a href="#" class="text-dark" id="delete"><i class="fa fa-trash"></i></a></td>'+
+                    '<td class="border-0 align-middle"><strong>'+ (product.price * product.quantity / 100).toFixed(2).replace(".",",") +'€</strong></td>'+
                 '</tr>'
 
             document.getElementById('cart').innerHTML = html;
