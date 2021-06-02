@@ -42,7 +42,7 @@ function displayProductsQuantity() {
         });
         
     } else {
-        // Si aucun produit dans le panier
+        // Si aucun produit dans le panier on affiche un message et on masque le formulaire
         noProduct = '<h5 class="mb-0 ml-3 d-inline-block align-middle">Vous n\'avez aucun produit dans votre panier !</h5>'
         document.getElementById('cart').innerHTML = noProduct;
         document.getElementById("formstyle").style.display = "none";

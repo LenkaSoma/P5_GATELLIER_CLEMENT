@@ -1,5 +1,7 @@
 // On récupère toutes les informations de l'API
-fetch('http://localhost:3000/api/cameras').then((response) => response.json()).then((response) => {
+fetch('http://localhost:3000/api/cameras')
+  .then((response) => response.json())
+  .then((response) => {
     let element = "";
 
     // On fait une boucle pour afficher en HTML tous les éléments présents
