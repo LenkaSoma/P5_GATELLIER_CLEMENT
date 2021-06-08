@@ -83,23 +83,23 @@
                         <form method="POST" type="submit" id="form">
                           <div class="form-group">
                             <label for="input-firstname">Prénom</label>
-                            <input type="text" class="form-control" id="input-firstname" placeholder="Votre prénom" maxlength="60" required>
+                            <input type="text" class="form-control" id="input-firstname" placeholder="Votre prénom" minlength="2" maxlength="32" pattern="[A-Za-z]{1,32}" required>
                           </div>
                           <div class="form-group">
                             <label for="input-lastname">Nom de famille</label>
-                            <input type="text" class="form-control" id="input-lastname" placeholder="Votre nom de famille" maxlength="60" required>
+                            <input type="text" class="form-control" id="input-lastname" placeholder="Votre nom de famille" minlength="2" maxlength="32" pattern="[A-Za-z]{1,32}" required>
                           </div>
                           <div class="form-group">
                             <label for="input-address">Adresse</label>
-                            <input type="text" class="form-control" id="input-address" placeholder="Votre adresse" maxlength="150" required>
+                            <input type="text" class="form-control" id="input-address" placeholder="Votre adresse" minlength="2" maxlength="60" required>
                           </div>
                           <div class="form-group">
                             <label for="input-city">Ville</label>
-                            <input type="text" class="form-control" id="input-city" placeholder="Votre ville" maxlength="60" required>
+                            <input type="text" class="form-control" id="input-city" placeholder="Votre ville" minlength="2" maxlength="32" pattern="[A-Za-z]{1,32}" required>
                           </div>
                           <div class="form-group">
                             <label for="input-email">Email</label>
-                            <input type="email" class="form-control" id="input-email" placeholder="Votre e-mail" maxlength="80" required>
+                            <input type="email" class="form-control" id="input-email" placeholder="Votre e-mail" minlength="2" maxlength="40" required>
                           </div>
                           <ul class="list-unstyled mb-4">
                             <li class="d-flex justify-content-between py-3 border-bottom">

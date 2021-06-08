@@ -22,7 +22,7 @@ fetch('http://localhost:3000/api/cameras')
           '</div>'+
         '</div>'
     };
-    
+
     // On envoie le tout après l'ID cameras en HTML
     document.getElementById("cameras").innerHTML = element;
 });

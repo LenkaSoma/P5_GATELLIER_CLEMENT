@@ -1,7 +1,7 @@
 // On récupère les données du cache
-const contact   = JSON.parse(sessionStorage.getItem("contact"));
-const orderId   = JSON.parse(sessionStorage.getItem("orderId"));
-const total     = JSON.parse(sessionStorage.getItem("total"));
+const contact   = JSON.parse(localStorage.getItem("contact"));
+const orderId   = JSON.parse(localStorage.getItem("orderId"));
+const total     = JSON.parse(localStorage.getItem("total"));
 let element     = "";
     // On affiche la page de confirmation
     element +=
@@ -34,7 +34,7 @@ let element     = "";
 
     document.getElementById('confirm').innerHTML = element;
     // On supprime les éléments du cache
-    sessionStorage.removeItem('contact');
-    sessionStorage.removeItem('total');
-    sessionStorage.removeItem('orderId');
+    localStorage.removeItem('contact');
+    localStorage.removeItem('total');
+    localStorage.removeItem('orderId');
     

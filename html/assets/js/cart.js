@@ -4,8 +4,8 @@ let total = 0;
 displayProductsQuantity()
 
 function displayProductsQuantity() {
-    if (sessionStorage.getItem("anyItem") !== null) {
-        let products    = JSON.parse(sessionStorage.getItem("anyItem"));
+    if (localStorage.getItem("anyItem") !== null) {
+        let products    = JSON.parse(localStorage.getItem("anyItem"));
         total           = 0;
         let html        = "";
 
@@ -61,8 +61,8 @@ function SendForm() {
 
     // Pour chaque produit présent on envoie l'ID
     let products = [];
-    if (sessionStorage.getItem('anyItem') !== null) {
-        let productTab = JSON.parse(sessionStorage.getItem("anyItem"));
+    if (localStorage.getItem('anyItem') !== null) {
+        let productTab = JSON.parse(localStorage.getItem("anyItem"));
         productTab.forEach(p => { products.push(p._id) });
     }
 
@@ -80,10 +80,10 @@ function SendInfos(contactItems) {
     }).then(response => {
         return response.json();
     }).then(resp => {
-        sessionStorage.setItem('contact', JSON.stringify(resp.contact));
-        sessionStorage.setItem('orderId', JSON.stringify(resp.orderId));
-        sessionStorage.setItem('total', JSON.stringify(total));
-        sessionStorage.removeItem('anyItem');
+        localStorage.setItem('contact', JSON.stringify(resp.contact));
+        localStorage.setItem('orderId', JSON.stringify(resp.orderId));
+        localStorage.setItem('total', JSON.stringify(total));
+        localStorage.removeItem('anyItem');
         window.location.replace("./confirm.html");
     });
 }

@@ -84,13 +84,13 @@ function addProduct(product) {
     selectedLense: product.selectedLense
   }
 
-  // Si la sessionStorage est vide elle crée un nouveau tableau
-  if (sessionStorage.getItem('anyItem') === null) {
+  // Si la localStorage est vide elle crée un nouveau tableau
+  if (localStorage.getItem('anyItem') === null) {
     currentCart.push(savedProduct);
-    sessionStorage.setItem('anyItem', JSON.stringify(currentCart));
+    localStorage.setItem('anyItem', JSON.stringify(currentCart));
   // Sinon elle récupère le tableau et enregistre le produit
   } else {
-    currentCart = JSON.parse(sessionStorage.getItem('anyItem'));
+    currentCart = JSON.parse(localStorage.getItem('anyItem'));
 
     currentCart.forEach(cart => {
       if (product._id === cart._id && product.selectedLense === cart.selectedLense) {
@@ -100,7 +100,7 @@ function addProduct(product) {
     });
 
     if (otherProduct) currentCart.push(savedProduct);
-    sessionStorage.setItem('anyItem', JSON.stringify(currentCart));
+    localStorage.setItem('anyItem', JSON.stringify(currentCart));
   }
   
   totalProducts()
